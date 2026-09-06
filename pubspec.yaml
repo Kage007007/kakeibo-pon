@@ -1,0 +1,56 @@
+name: finance_clarity_app
+description: "A finance management app with focus on fast input and beautiful analytics"
+publish_to: 'none'
+
+version: 1.2.0+6
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # ローカルストレージ
+  shared_preferences: ^2.2.2
+
+  # UUID生成
+  uuid: ^4.3.3
+
+  # 日付フォーマット
+  intl: ^0.20.2
+
+  # Material Design Icons
+  cupertino_icons: ^1.0.6
+
+  # ローカル通知
+  flutter_local_notifications: ^17.0.0
+  timezone: ^0.9.0
+
+  # 広告SDK
+  google_mobile_ads: ^5.1.0
+
+  # SNSシェア機能
+  share_plus: ^7.2.2
+  path_provider: ^2.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  # フォント設定（オプション）
+  # fonts:
+  #   - family: Inter
+  #     fonts:
+  #       - asset: fonts/Inter-Regular.ttf
+  #       - asset: fonts/Inter-Bold.ttf
+  #         weight: 700
+  #       - asset: fonts/Inter-Black.ttf
+  #         weight: 900
