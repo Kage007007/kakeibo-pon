@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 /// 広告設定の一元管理クラス
@@ -29,10 +30,9 @@ class AdConfig {
   // 2. 開発/本番モード切り替え
   // =========================================
 
-  /// true: テスト広告を使用 / false: 本番広告を使用
-  ///
-  /// ⚠️ リリース前に必ずfalseに変更すること！
-  static const bool useTestAds = false;
+  /// 開発時はテスト広告。ReleaseでもUSE_TEST_ADS=trueで動作確認できる。
+  static const bool useTestAds =
+      !kReleaseMode || bool.fromEnvironment('USE_TEST_ADS');
 
   // =========================================
   // 3. 広告有効化フラグ（広告タイプ別ON/OFF）
